@@ -36,7 +36,6 @@ function App() {
         return weapon;
       });
 
-      // Enregistrer les données dans le local storage
       localStorage.setItem('weaponData', JSON.stringify(updatedData));
       calculateProgress(updatedData);
       if (zombie) {
