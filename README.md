@@ -1,4 +1,13 @@
-# React + Vite
+# Camo tracker
+
+## Work in progress
+### Simple camo tracker inspired by [This 2022 MWII VueJs camo tracker](https://github.com/carlssonemil/orion)
+
+Progress saved in the LocalStorage, if you clean your browser you lose progress for now
+
+
+
+## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
