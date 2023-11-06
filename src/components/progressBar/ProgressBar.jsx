@@ -1,10 +1,10 @@
 import "./ProgressBar.scss"
 
-const ProgressBar = ({ progress }) => {
+const ProgressBar = ({progress, zombie}) => {
   return (
       <div className="progress-bar-container">
         <div className="progress-bar" style={{width: `${progress}%`}}>
-          Progress: {progress.toFixed(2)}%
+          <span>{zombie ? "Progress zombie" : "Progress"}: {progress.toFixed(2)}%</span>
         </div>
       </div>
   );

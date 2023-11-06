@@ -4,43 +4,34 @@ const WeaponItem = ({weapon, handleMasteryProgressClick, category}) => {
   return (
       <li key={weapon.name}>
         {weapon.name}
-        <div
-            className={weapon.masteryProgress.Gold ? 'active' : ''}
-            onClick={() =>
-                handleMasteryProgressClick(category, weapon.name, 'Gold')
-            }
-        >
-          Gold:
-          {weapon.masteryProgress.Gold.toString()}
-        </div>
-        <div
-            className={weapon.masteryProgress.Diamond ? 'active' : ''}
-            onClick={() =>
-                handleMasteryProgressClick(category, weapon.name, 'Diamond')
-            }
-        >
-          Diamond:
-          {weapon.masteryProgress.Diamond.toString()}
-        </div>
-        <div
-            className={weapon.masteryProgress.Poly ? 'active' : ''}
-            onClick={() =>
-                handleMasteryProgressClick(category, weapon.name, 'Poly')
-            }
-        >
-          Poly:
-          {weapon.masteryProgress.Poly.toString()}
-        </div>
-        <div
-            className={weapon.masteryProgress.DM ? 'active' : ''}
-            onClick={() =>
-                handleMasteryProgressClick(category, weapon.name, 'DM')
-            }
-        >
-          DM:
 
-          {weapon.masteryProgress.DM.toString()}
-        </div>
+        {/* Multiplayer camos */}
+        {Object.keys(weapon.masteryProgress).map((progressKey) => (
+            <div
+                key={progressKey}
+                className={weapon.masteryProgress[progressKey] ? 'active' : ''}
+                onClick={() =>
+                    handleMasteryProgressClick(category, weapon.name, progressKey)
+                }
+            >
+              {progressKey}:
+              {weapon.masteryProgress[progressKey].toString()}
+            </div>
+        ))}
+
+        {/* Zombie camos */}
+        {Object.keys(weapon.masteryProgressZombie).map((progressKey) => (
+            <div
+                key={progressKey}
+                className={weapon.masteryProgressZombie[progressKey] ? 'active' : ''}
+                onClick={() =>
+                    handleMasteryProgressClick(category, weapon.name, progressKey, true)
+                }
+            >
+              {progressKey}:
+              {weapon.masteryProgressZombie[progressKey].toString()}
+            </div>
+        ))}
       </li>
   );
 };

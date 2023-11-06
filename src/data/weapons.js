@@ -7,6 +7,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     },
     {
@@ -16,6 +22,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     },
     {
@@ -25,6 +37,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     },
     {
@@ -34,6 +52,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     },
     {
@@ -43,6 +67,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     },
     {
@@ -52,6 +82,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     }
   ],
@@ -63,6 +99,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     },
     {
@@ -72,6 +114,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     },
     {
@@ -81,6 +129,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     }
   ],
@@ -92,6 +146,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     },
     {
@@ -101,6 +161,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     },
     {
@@ -110,6 +176,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     },
     {
@@ -119,6 +191,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     },
     {
@@ -128,6 +206,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     },
     {
@@ -137,6 +221,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     }
   ],
@@ -148,6 +238,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     },
     {
@@ -157,6 +253,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     },
     {
@@ -166,6 +268,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     }
   ],
@@ -177,6 +285,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     },
     {
@@ -186,6 +300,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     },
     {
@@ -195,6 +315,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     },
     {
@@ -204,6 +330,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     },
     {
@@ -213,6 +345,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     }
   ],
@@ -224,6 +362,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     },
     {
@@ -233,6 +377,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     },
     {
@@ -242,6 +392,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     },
     {
@@ -251,6 +407,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     }
   ],
@@ -262,6 +424,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     },
     {
@@ -271,6 +439,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     },
     {
@@ -280,6 +454,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     }
   ],
@@ -291,6 +471,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     },
     {
@@ -300,6 +486,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     },
     {
@@ -309,6 +501,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     },
     {
@@ -318,6 +516,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     }
   ],
@@ -329,6 +533,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     }
   ],
@@ -340,6 +550,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     },
     {
@@ -349,6 +565,12 @@ const weaponList = {
         Diamond: false,
         Poly: false,
         DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
       }
     }
   ]

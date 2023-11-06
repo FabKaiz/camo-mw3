@@ -5,31 +5,31 @@ import ProgressBar from "./components/progressBar/ProgressBar.jsx";
 import WeaponItem from "./components/weaponItem/WeaponItem.jsx";
 
 function App() {
-  // const [weapons, setWeapons] = useState([])
   const [weaponData, setWeaponData] = useState({...weaponList});
   const [progress, setProgress] = useState(0);
+  const [progressZombie, setProgressZombie] = useState(0);
 
-// Récupérer les données du local storage au chargement de la page
   useEffect(() => {
     const localData = localStorage.getItem('weaponData');
     if (localData) {
       setWeaponData(JSON.parse(localData));
-      calculateProgress(JSON.parse(localData)); // Calculer la progression après récupération des données
+      calculateProgress(JSON.parse(localData));
+      calculateProgressZombie(JSON.parse(localData));
     }
   }, []);
 
-
-  // Mettre à jour les données lorsqu'un masteryProgress est cliqué
-  const handleMasteryProgressClick = (category, weaponName, progressKey) => {
+  const handleMasteryProgressClick = (category, weaponName, progressKey, zombie) => {
     setWeaponData((prevData) => {
       const updatedData = {...prevData};
+      const progressObjectName = zombie ? 'masteryProgressZombie' : 'masteryProgress';
+
       updatedData[category] = updatedData[category].map((weapon) => {
         if (weapon.name === weaponName) {
           return {
             ...weapon,
-            masteryProgress: {
-              ...weapon.masteryProgress,
-              [progressKey]: !weapon.masteryProgress[progressKey],
+            [progressObjectName]: {
+              ...weapon[progressObjectName],
+              [progressKey]: !weapon[progressObjectName][progressKey],
             },
           };
         }
@@ -38,15 +38,15 @@ function App() {
 
       // Enregistrer les données dans le local storage
       localStorage.setItem('weaponData', JSON.stringify(updatedData));
+      calculateProgress(updatedData);
+      if (zombie) {
+        calculateProgressZombie(updatedData);
+      }
 
       return updatedData;
     });
-
-    // Recalculer la progression
-    calculateProgress();
   };
 
-  // Calculer la progression
   const calculateProgress = (localData) => {
     let totalTrue = 0;
     let totalFalse = 0;
@@ -54,20 +54,9 @@ function App() {
     if (localData) {
       for (const category in localData) {
         localData[category].forEach((weapon) => {
-          if (weapon.masteryProgress.Gold) totalTrue++;
-          if (weapon.masteryProgress.Diamond) totalTrue++;
-          if (weapon.masteryProgress.Poly) totalTrue++;
-          if (weapon.masteryProgress.DM) totalTrue++;
-          totalFalse += 4;
-        });
-      }
-    } else {
-      for (const category in weaponData) {
-        weaponData[category].forEach((weapon) => {
-          if (weapon.masteryProgress.Gold) totalTrue++;
-          if (weapon.masteryProgress.Diamond) totalTrue++;
-          if (weapon.masteryProgress.Poly) totalTrue++;
-          if (weapon.masteryProgress.DM) totalTrue++;
+          for (const progressKey in weapon.masteryProgress) {
+            if (weapon.masteryProgress[progressKey]) totalTrue++;
+          }
           totalFalse += 4;
         });
       }
@@ -76,48 +65,75 @@ function App() {
     setProgress((totalTrue / (totalTrue + totalFalse)) * 100);
   };
 
+  const calculateProgressZombie = (localData) => {
+    let totalTrue = 0;
+    let totalFalse = 0;
 
-  const resetAllProgress = () => {
-  const resetData = { ...weaponData };
-  for (const category in resetData) {
-    resetData[category] = resetData[category].map((weapon) => ({
-      ...weapon,
-      masteryProgress: {
-        Gold: false,
-        Diamond: false,
-        Poly: false,
-        DM: false,
-      },
-    }));
+    if (localData) {
+      for (const category in localData) {
+        localData[category].forEach((weapon) => {
+          for (const progressKey in weapon.masteryProgressZombie) {
+            if (weapon.masteryProgressZombie[progressKey]) totalTrue++;
+          }
+          totalFalse += 4;
+        });
+      }
+    }
+
+    setProgressZombie((totalTrue / (totalTrue + totalFalse)) * 100);
   }
 
-    // Enregistrer les données dans le local storage
+  const resetAllProgress = () => {
+    const resetData = {...weaponData};
+    for (const category in resetData) {
+      resetData[category] = resetData[category].map((weapon) => ({
+        ...weapon,
+        masteryProgress: {
+          Gold: false,
+          Diamond: false,
+          Poly: false,
+          DM: false,
+        },
+        masteryProgressZombie: {
+          GoldZ: false,
+          DiamondZ: false,
+          PolyZ: false,
+          DMZ: false,
+        },
+      }));
+    }
+
     localStorage.setItem('weaponData', JSON.stringify(resetData));
 
-    // Mettre à jour les données et recalculer la progression
     setWeaponData(resetData);
     calculateProgress(resetData);
-};
-
+    calculateProgressZombie(resetData)
+  };
 
   return (
       <>
+        <button onClick={resetAllProgress}>Reset all progress</button>
+
         <h1>CAMO MW3</h1>
 
-        {Object.keys(weaponData).map((category) => (
+        {weaponData && Object.keys(weaponData).map((category) => (
             <div key={category}>
               <h2>{category}</h2>
               <ul>
                 {weaponData[category].map((weapon) => (
-                    <WeaponItem key={weapon.name} weapon={weapon} category={category} handleMasteryProgressClick={handleMasteryProgressClick} />
+                    <WeaponItem
+                        key={weapon.name}
+                        weapon={weapon}
+                        category={category}
+                        handleMasteryProgressClick={handleMasteryProgressClick}
+                    />
                 ))}
               </ul>
             </div>
         ))}
 
-          <ProgressBar progress={progress} />
-
-        <button onClick={resetAllProgress}>Reset all progress</button>
+        <ProgressBar progress={progress} />
+        <ProgressBar progress={progressZombie} zombie={true} />
       </>
   )
 }
