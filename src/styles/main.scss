@@ -1,0 +1,34 @@
+@import './global/base';
+
+.layout__content {
+    @include media-up(sm) {
+        display: flex;
+    }
+
+    .outlet {
+        width: 100%;
+    }
+}
+
+.recharts-legend-item .recharts-surface {
+    vertical-align: unset !important;
+}
+
+.recharts-default-legend {
+    padding-top: 2.4rem !important;
+}
+
+.recharts-wrapper {
+    position: unset !important;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 2.4rem;
+    font-weight: $weight-medium;
+}
+
