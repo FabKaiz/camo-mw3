@@ -1,4 +1,97 @@
-li {
+@import "../../styles/global/helpers.scss";
+
+.weapon__container {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: $text-width repeat(4, 1fr) $separator-width repeat(4, 1fr);
+
+    border-radius: 0.4rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+
+    h3 {
+        background: $dark-grey;
+        font-size: 1.7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .camo {
+        padding: 1rem;
+        background: $multiplayer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.zombie {
+            background: $zombie;
+        }
+    }
+
+
+    .camoPic {
+        position: relative;
+        font-size: 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 0.4rem;
+        overflow: hidden;
+
+        &:after {
+            transition: all 0.2s ease;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(30, 30, 30, 0.7) url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%2310ac84"><path d="M18.71,7.21a1,1,0,0,0-1.42,0L9.84,14.67,6.71,11.53A1,1,0,1,0,5.29,13l3.84,3.84a1,1,0,0,0,1.42,0l8.16-8.16A1,1,0,0,0,18.71,7.21Z"></path></svg>') no-repeat;
+            background-size: 100%;
+            opacity: 0;
+            cursor: pointer;
+            // Remove
+            //background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%23ee5253"><path d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"></path></svg>');
+        }
+
+        &.Gold {
+            background: url('/assets/camo/gold.png');
+        }
+
+        &.Diamond {
+            background: url('/assets/camo/diam.png');
+        }
+
+        &.Poly {
+            background: url('/assets/camo/poly.png');
+        }
+
+        &.DM {
+            background: url('/assets/camo/dm.png');
+        }
+
+        &.GoldZ {
+            background: url('/assets/camo/goldz.png');
+        }
+
+        &.DiamondZ {
+            background: url('/assets/camo/diamz.png');
+        }
+
+        &.PolyZ {
+            background: url('/assets/camo/polyz.png');
+        }
+
+        &.DMZ {
+            background: url('/assets/camo/dmz.png');
+        }
+
+        &.active,
+        &:hover {
+            &:after {
+                opacity: 1;
+
+                // Remove
+                //background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%23ee5253"><path d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"></path></svg>');
+            }
+        }
+    }
 }

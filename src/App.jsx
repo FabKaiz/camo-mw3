@@ -111,28 +111,38 @@ function App() {
 
   return (
       <>
-        <button onClick={resetAllProgress}>Reset all progress</button>
 
         <h1>CAMO MW3</h1>
 
-        {weaponData && Object.keys(weaponData).map((category) => (
-            <div key={category}>
-              <h2>{category}</h2>
-              <ul>
-                {weaponData[category].map((weapon) => (
-                    <WeaponItem
-                        key={weapon.name}
-                        weapon={weapon}
-                        category={category}
-                        handleMasteryProgressClick={handleMasteryProgressClick}
-                    />
-                ))}
-              </ul>
-            </div>
-        ))}
+        <div className="camo__list-container">
+          <div className="row__title">
+            <h2 className="weapon">Weapon</h2>
+            <h2 className="camos">Camos Multiplayer</h2>
+            <div className="separator" />
+            <h2 className="zombies">Camos Zombies</h2>
+          </div>
+
+          {weaponData && Object.keys(weaponData).map((category) => (
+              <div key={category} className='category__container'>
+                <h2 className='category'>{category}</h2>
+                <ul>
+                  {weaponData[category].map((weapon) => (
+                      <WeaponItem
+                          key={weapon.name}
+                          weapon={weapon}
+                          category={category}
+                          handleMasteryProgressClick={handleMasteryProgressClick}
+                      />
+                  ))}
+                </ul>
+              </div>
+          ))}
+        </div>
 
         <ProgressBar progress={progress} />
         <ProgressBar progress={progressZombie} zombie={true} />
+
+        <button onClick={resetAllProgress}>Reset all progress</button>
       </>
   )
 }
