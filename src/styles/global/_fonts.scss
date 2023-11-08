@@ -1,3 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 $font-base: 'Roboto', sans-serif;
+$font-custom: 'MW', sans-serif;
+
+
+@font-face {
+    font-family: 'MW';
+    font-style: normal;
+    font-weight: 400;
+    src: local('MW'), url('fonts/ModernWarfare-8MM6z.ttf') format('truetype');
+}

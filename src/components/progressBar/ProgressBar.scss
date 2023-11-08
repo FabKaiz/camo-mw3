@@ -1,0 +1,26 @@
+@import "../../styles/global/helpers.scss";
+
+.progress__bar-container {
+    position: relative;
+    background: #212121;
+
+    .progress-bar {
+        background-image:  $gradient-multiplayer;
+        padding: 1.5rem 0;
+        transition: width 1s ease;
+
+        &.zombie {
+            background-image: $gradient-zombie;
+        }
+    }
+
+    span {
+        white-space: nowrap;
+        text-shadow: #212121 1px 1px 4px;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

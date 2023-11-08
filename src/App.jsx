@@ -112,9 +112,13 @@ function App() {
   return (
       <>
 
-        <h1>CAMO MW3</h1>
+        <header className="header">
+          <h1>CAMO MWIII</h1>
 
-        <div className="camo__list-container">
+          <button onClick={resetAllProgress}>Reset all progress</button>
+        </header>
+
+        <main className="camo__list-container">
           <div className="row__title">
             <h2 className="weapon">Weapon</h2>
             <h2 className="camos">Camos Multiplayer</h2>
@@ -137,12 +141,15 @@ function App() {
                 </ul>
               </div>
           ))}
+          <div className="copyright">
+            <p>Created by <a href="https://github.com/FabKaiz">FabKaiz</a></p>
+          </div>
+        </main>
+
+        <div className="progress__bars-container">
+          <ProgressBar progress={progress} />
+          <ProgressBar progress={progressZombie} zombie={true} />
         </div>
-
-        <ProgressBar progress={progress} />
-        <ProgressBar progress={progressZombie} zombie={true} />
-
-        <button onClick={resetAllProgress}>Reset all progress</button>
       </>
   )
 }
