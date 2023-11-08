@@ -2,7 +2,7 @@
 
 .weapon__container {
     display: grid;
-    grid-template-columns: $text-width repeat(4, 1fr) $separator-width repeat(4, 1fr);
+    grid-template-columns: $text-width 1fr $separator-width  1fr;
 
     border-radius: 0.4rem;
     margin-bottom: 1rem;
@@ -20,16 +20,27 @@
         padding: 1rem;
     }
 
+    .zombies_container,
+    .multiplayer_container {
+        @include media-up(sm) {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+
+    .multiplayer_container {
+        background: $gradient-multiplayer;
+    }
+
+    .zombies_container {
+        background: $gradient-zombie;
+    }
+
     .camo {
         padding: 1rem;
-        background: $multiplayer;
         display: flex;
         justify-content: center;
         align-items: center;
-
-        &.zombie {
-            background: $zombie;
-        }
     }
 
 
