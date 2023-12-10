@@ -89,6 +89,21 @@ const weaponList = {
         PolyZ: false,
         DMZ: false
       }
+    },
+    {
+      name: "RAM-7",
+      masteryProgress: {
+        Gold: false,
+        Diamond: false,
+        Poly: false,
+        DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
+      }
     }
   ],
   "Battle rifles": [
@@ -228,6 +243,21 @@ const weaponList = {
         PolyZ: false,
         DMZ: false
       }
+    },
+    {
+      name: "HRM-9",
+      masteryProgress: {
+        Gold: false,
+        Diamond: false,
+        Poly: false,
+        DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
+      }
     }
   ],
   "Shotguns": [
@@ -352,7 +382,22 @@ const weaponList = {
         PolyZ: false,
         DMZ: false
       }
-    }
+    },
+    {
+      name: "TAQ Evolvere",
+      masteryProgress: {
+        Gold: false,
+        Diamond: false,
+        Poly: false,
+        DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
+      }
+    },
   ],
   "Marksman rifles": [
     {
@@ -461,7 +506,22 @@ const weaponList = {
         PolyZ: false,
         DMZ: false
       }
-    }
+    },
+    {
+      name: "XRK Stalker",
+      masteryProgress: {
+        Gold: false,
+        Diamond: false,
+        Poly: false,
+        DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
+      }
+    },
   ],
   "Pistols": [
     {
@@ -540,7 +600,22 @@ const weaponList = {
         PolyZ: false,
         DMZ: false
       }
-    }
+    },
+    {
+      name: "Stormender",
+      masteryProgress: {
+        Gold: false,
+        Diamond: false,
+        Poly: false,
+        DM: false
+      },
+      masteryProgressZombie: {
+        GoldZ: false,
+        DiamondZ: false,
+        PolyZ: false,
+        DMZ: false
+      }
+    },
   ],
   "Melee": [
     {
