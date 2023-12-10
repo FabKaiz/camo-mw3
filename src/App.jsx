@@ -61,7 +61,7 @@ function App() {
       }
     }
 
-    setProgress((totalTrue / totalFalse) * 100);
+    setProgress((totalTrue / 4) / 36  * 100);
   };
 
   const calculateProgressZombie = (localData) => {
@@ -79,7 +79,7 @@ function App() {
       }
     }
 
-    setProgressZombie((totalTrue / totalFalse) * 100);
+    setProgressZombie((totalTrue / 4) / 36  * 100);
   }
 
   const resetAllProgress = () => {
