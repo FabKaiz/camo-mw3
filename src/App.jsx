@@ -83,6 +83,8 @@ function App() {
   }
 
   const resetAllProgress = () => {
+    localStorage.removeItem('weaponData');
+
     const resetData = { ...weaponData };
     for (const category in resetData) {
       resetData[category] = resetData[category].map((weapon) => ({
