@@ -5,7 +5,7 @@ import ProgressBar from "./components/progressBar/ProgressBar.jsx";
 import WeaponItem from "./components/weaponItem/WeaponItem.jsx";
 
 function App() {
-  const [weaponData, setWeaponData] = useState({...weaponList});
+  const [weaponData, setWeaponData] = useState({ ...weaponList });
   const [progress, setProgress] = useState(0);
   const [progressZombie, setProgressZombie] = useState(0);
 
@@ -20,7 +20,7 @@ function App() {
 
   const handleMasteryProgressClick = (category, weaponName, progressKey, zombie) => {
     setWeaponData((prevData) => {
-      const updatedData = {...prevData};
+      const updatedData = { ...prevData };
       const progressObjectName = zombie ? 'masteryProgressZombie' : 'masteryProgress';
 
       updatedData[category] = updatedData[category].map((weapon) => {
@@ -61,7 +61,7 @@ function App() {
       }
     }
 
-    setProgress((totalTrue / (totalTrue + totalFalse)) * 100);
+    setProgress((totalTrue / totalFalse) * 100);
   };
 
   const calculateProgressZombie = (localData) => {
@@ -79,11 +79,11 @@ function App() {
       }
     }
 
-    setProgressZombie((totalTrue / (totalTrue + totalFalse)) * 100);
+    setProgressZombie((totalTrue / totalFalse) * 100);
   }
 
   const resetAllProgress = () => {
-    const resetData = {...weaponData};
+    const resetData = { ...weaponData };
     for (const category in resetData) {
       resetData[category] = resetData[category].map((weapon) => ({
         ...weapon,
